@@ -9,15 +9,10 @@ export default function Home() {
         <title>Go Flag Me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <Header />
+      <main>        
         <p>Wecome to Go Flag Me!</p>
+        <p>This will be the home page! Can' wait to see more</p>
       </main>
-
-      <footer>
-          Powered by Shea and Paul
-      </footer>
     </div>
   )
 }

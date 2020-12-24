@@ -1,3 +1,3 @@
 export default function Subscriptions () {
-    return <h1>Welcome to the Subscrptions Page</h1>
+    return <p>This is the subscriptions page</p>
 }
