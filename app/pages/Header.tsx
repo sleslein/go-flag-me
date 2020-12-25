@@ -4,10 +4,11 @@ import { useRouter } from 'next/router'
 export default function Header() {
     return (
         <div className="flex flex-row items-center p-1 bg-blue-900 text-blue-50">
-            <div className="text-2xl">Go Flag Me!</div>
+            <div className="text-2xl mr-5">Go Flag Me!</div>
             <ul className="flex flex-row">
                 <NavLink href="/">Home</NavLink> 
                 <NavLink href="/subscriptions">Subscriptions</NavLink>
+                <NavLink href="/signup">Sign Up</NavLink>
             </ul>
         </div>
     );
