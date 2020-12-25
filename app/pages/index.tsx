@@ -1,6 +1,5 @@
 import Head from 'next/head';
-//import styles from '../styles/Home.module.css';
-import Header from './Header';
+import Card from '../components/Card';
 
 export default function Home() {
   return (
@@ -12,6 +11,7 @@ export default function Home() {
       <main>        
         <p>Wecome to Go Flag Me!</p>
         <p>This will be the home page! Can' wait to see more</p>
+        <Card title="Sample Card">This is just a sample card with some text</Card>
       </main>
     </div>
   )
