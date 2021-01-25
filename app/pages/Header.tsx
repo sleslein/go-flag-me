@@ -3,12 +3,13 @@ import { useRouter } from 'next/router'
 
 export default function Header() {
     return (
-        <div className="flex flex-row items-center p-1 bg-blue-900 text-blue-50">
-            <div className="text-2xl mr-5">Go Flag Me!</div>
+        <div className="w-screen flex flex-row items-center p-1 white text-grey-800 font-semibold uppercase">
             <ul className="flex flex-row">
-                <NavLink href="/">Home</NavLink> 
-                <NavLink href="/subscriptions">Subscriptions</NavLink>
-                <NavLink href="/signup">Sign Up</NavLink>
+                <NavLink href="/">How it Works</NavLink> 
+                <NavLink href="/subscriptions">Get a Flag</NavLink>
+                <SiteNameLink href="/">Old Glory Inc</SiteNameLink>
+                <NavLink href="/signup">Sign In</NavLink>
+                <NavLink href="/get-started">Get Started</NavLink>            
             </ul>
         </div>
     );
@@ -17,6 +18,16 @@ export default function Header() {
 interface NavLinkProps {
     children: React.ReactNode;
     href:string;
+}
+
+function SiteNameLink ({children, href}: NavLinkProps) {
+    return (
+        <Link href={href}>
+            <a className="px-2 mx-1 text-3xl text-black">
+                {children}
+            </a>
+        </Link>
+    );
 }
 function NavLink({children, href}: NavLinkProps) {
     const router = useRouter();
@@ -33,7 +44,7 @@ function NavLink({children, href}: NavLinkProps) {
 function ActiveNavLink({children, href}: NavLinkProps) {
     return (            
         <Link href={href}>
-            <a className="px-2 mx-1 bg-blue-200 rounded-full text-blue-800">
+            <a className="px-2 mx-1 bg-gray-200 rounded-full text-grey-700">
                 {children}
             </a>
         </Link>
@@ -42,7 +53,7 @@ function ActiveNavLink({children, href}: NavLinkProps) {
 function InactiveNavLink({children, href}: NavLinkProps) {
     return (            
         <Link href={href}>
-            <a className="px-2 mx-1 hover:bg-blue-200 rounded-full hover:text-blue-800">
+            <a className="px-2 mx-1 hover:bg-gray-200 rounded-full text-grey-700">
                 {children}
             </a>
         </Link>
