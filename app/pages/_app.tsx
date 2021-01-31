@@ -5,9 +5,9 @@ import Footer from './Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <div className="container">
+  <div className="container mx-auto">
     <Header />
-    <div className="p-5">
+    <div className="">
       <Component {...pageProps} /> 
     </div>
     <Footer />
