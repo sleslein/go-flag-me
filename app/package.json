@@ -9,9 +9,11 @@
     "postbuild": "next-on-netlify"
   },
   "dependencies": {
+    "@types/netlify-identity-widget": "^1.9.1",
     "@types/node": "^14.14.16",
     "@types/react": "^17.0.0",
     "autoprefixer": "^10.1.0",
+    "netlify-identity-widget": "^1.9.1",
     "next": "10.0.4",
     "next-on-netlify": "^2.6.3",
     "postcss": "^8.2.1",

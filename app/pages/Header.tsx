@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Button from '../components/Button'
+import LoginWidget from '../components/Login'
 
 
 export default function Header() {
@@ -12,6 +13,7 @@ export default function Header() {
                 <SiteNameLink href="/">Old Glory Inc</SiteNameLink>
                 <NavLink href="/signup">Sign In</NavLink>
                 <Button><NavLink href="/get-started">Get Started</NavLink></Button>            
+                <LoginWidget />
             </ul>
         </div>
     );
