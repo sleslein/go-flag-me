@@ -1,16 +1,17 @@
+import { User } from 'netlify-identity-widget';
 import { useEffect, useState } from 'react';
 import netlifyAuth from '../netlifyAuth';
 import Button from './Button';
 
 export default function LoginWidget() {
     const [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState<User | null>(null);
     
     const login = () => {
-    netlifyAuth.authenticate((user) => {
+    netlifyAuth.authenticate((user: User) => {
         setLoggedIn(!!user)
         setUser(user)
-        netlifyAuth.closeModal()
+        
     })
     }
 
@@ -22,7 +23,7 @@ export default function LoginWidget() {
     }
 
     useEffect(() => {
-        netlifyAuth.initialize((user)=> {
+        netlifyAuth.initialize((user: User)=> {
             setLoggedIn(!!user);
         });
     }, [loggedIn]);
